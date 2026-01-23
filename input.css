@@ -87,7 +87,7 @@ h3 > a {
 }
 
 h3 > a::after {
-  @apply ml-1 h-4 w-4;
+  @apply ml-1 h-5 w-5;
   background-size: 100%;
   background-image: url("assets/img/external-link.svg");
   content: "";
