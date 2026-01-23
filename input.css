@@ -36,13 +36,11 @@ p a {
 }
 
 main section > ul > li {
-  @apply mb-8 pb-8;
-  border-bottom: 2px solid;
+  @apply mb-8;
 }
 
 main section > ul > li:last-child {
   @apply mb-0 pb-0;
-  border-bottom: none;
 }
 
 .info-unit > header {
@@ -93,6 +91,11 @@ h3 > a::after {
   content: "";
 }
 
-#skills ul {
-  @apply mb-6;
+#projects > ul > li {
+  @apply pb-8;
+  border-bottom: 2px solid;
+}
+
+#projects > ul > li:last-child {
+  border-bottom: none;
 }
