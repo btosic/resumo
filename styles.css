@@ -358,6 +358,21 @@ footer {
   }
 }
 
+.partners > li {
+  overflow: hidden;
+}
+
+.partners > li > a::after {
+  display: none;
+}
+
+.partners > li > a > img {
+  /* Shift the real image out of view and use a drop shadow to replace it */
+  filter: drop-shadow(100px 0 0 var(--color-secondary));
+  transform: translateX(-100px);
+  width: 100px;
+}
+
 .partners .icon {
   background-image: url("img/sprite.png");
   background-repeat: no-repeat;
@@ -365,14 +380,8 @@ footer {
   width: 100px;
   height: 100px;
   overflow: hidden;
-  filter: grayscale(100%);
+  filter: grayscale(100%) brightness(1.8);
   transition: filter 0.2s ease;
-}
-
-.partners .icon:hover {
-  @media (hover: hover) {
-    filter: none;
-  }
 }
 
 .partners .icon::after {
