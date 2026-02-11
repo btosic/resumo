@@ -323,23 +323,7 @@ main {
   }
 }
 
-#contact .contact li {
-  margin-bottom: calc(var(--spacing) * 1);
-}
-
-footer {
-  font-size: var(--text-sm);
-  margin-bottom: calc(var(--spacing) * 8);
-
-  & > hr {
-    margin-bottom: calc(var(--spacing) * 4);
-    width: calc(var(--spacing) * 16);
-  }
-}
-
-/* Index (Resumo) page */
-
-.partners {
+#partners > ul {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: calc(var(--spacing) * 6);
@@ -356,53 +340,69 @@ footer {
   @media (width >= 64rem) {
     grid-template-columns: repeat(4, 1fr);
   }
+
+  & > li {
+    overflow: hidden;
+
+    & > a {
+      &::after {
+        display: none;
+      }
+
+      & > img {
+        /* Shift the real image out of view and use a drop shadow to replace it */
+        filter: drop-shadow(100px 0 0 var(--color-secondary));
+        transform: translateX(-100px);
+        width: 100px;
+      }
+    }
+
+    .icon {
+      background-image: url("img/sprite.png");
+      background-repeat: no-repeat;
+      display: block;
+      width: 100px;
+      height: 100px;
+      overflow: hidden;
+      filter: grayscale(100%) brightness(1.8);
+      transition: filter 0.2s ease;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    .icon--steynsway {
+      background-position: -5px -665px;
+    }
+    .icon--fiveminutes {
+      background-position: -5px -115px;
+    }
+    .icon--shoutem {
+      background-position: -5px -335px;
+    }
+    .icon--sonarflow {
+      background-position: -5px -445px;
+    }
+    .icon--spectralmind {
+      background-position: -5px -555px;
+    }
+    .icon--taskfarm {
+      background-position: -5px -775px;
+    }
+  }
 }
 
-.partners > li {
-  overflow: hidden;
+#contact .contact li {
+  margin-bottom: calc(var(--spacing) * 1);
 }
 
-.partners > li > a::after {
-  display: none;
-}
+footer {
+  font-size: var(--text-sm);
+  margin-bottom: calc(var(--spacing) * 8);
 
-.partners > li > a > img {
-  /* Shift the real image out of view and use a drop shadow to replace it */
-  filter: drop-shadow(100px 0 0 var(--color-secondary));
-  transform: translateX(-100px);
-  width: 100px;
-}
-
-.partners .icon {
-  background-image: url("img/sprite.png");
-  background-repeat: no-repeat;
-  display: block;
-  width: 100px;
-  height: 100px;
-  overflow: hidden;
-  filter: grayscale(100%) brightness(1.8);
-  transition: filter 0.2s ease;
-}
-
-.partners .icon::after {
-  display: none;
-}
-
-.icon--steynsway {
-  background-position: -5px -665px;
-}
-.icon--fiveminutes {
-  background-position: -5px -115px;
-}
-.icon--shoutem {
-  background-position: -5px -335px;
-}
-.icon--sonarflow {
-  background-position: -5px -445px;
-}
-.icon--spectralmind {
-  background-position: -5px -555px;
-}
-.icon--taskfarm {
-  background-position: -5px -775px;
+  & > hr {
+    margin-bottom: calc(var(--spacing) * 4);
+    width: calc(var(--spacing) * 16);
+  }
 }
