@@ -347,6 +347,7 @@ footer {
   padding-left: 0;
   margin-bottom: 0;
   justify-items: center;
+  align-items: center;
 
   @media (width >= 48rem) {
     grid-template-columns: repeat(3, 1fr);
@@ -393,12 +394,6 @@ footer {
 .icon--spectralmind {
   background-position: -5px -555px;
 }
-.icon--perfectinterview {
-  background-position: -5px -225px;
-}
 .icon--taskfarm {
   background-position: -5px -775px;
-}
-.icon--cenosco {
-  background-position: -5px -5px;
 }
