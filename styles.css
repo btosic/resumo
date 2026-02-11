@@ -13,9 +13,37 @@
   --color-primary: #0b3142;
   --color-secondary: #bdb3b8;
   --color-secondary-bright: #f4f2f3;
-  --color-accent: #e6eed6;
-  --color-accent: #ff5050;
   --color-accent: #ff7060;
+
+  /* Alternative colors */
+
+  /*
+  --color-primary: #000000;
+  --color-secondary: #169976;
+  --color-secondary-bright: #1dcd9f;
+  --color-accent: #1dcd9f;
+  */
+
+  /*
+  --color-primary: #26355d;
+  --color-secondary: #ff8f00;
+  --color-secondary-bright: #ffdb00;
+  --color-accent: #acd2ed;
+  */
+
+  /*
+  --color-primary: #22092c;
+  --color-secondary: #be3144;
+  --color-secondary-bright: #f05941;
+  --color-accent: #f05941;
+  */
+
+  /*
+  --color-primary: #003399;
+  --color-secondary: #ffffff;
+  --color-secondary-bright: #b3b3b3;
+  --color-accent: #dd9f00;
+  */
 
   --color-secondary-50: color-mix(
     in srgb,
@@ -358,7 +386,7 @@ main {
     }
 
     .icon {
-      background-image: url("img/sprite.png");
+      background-image: url("assets/img/sprite.png");
       background-repeat: no-repeat;
       display: block;
       width: 100px;
