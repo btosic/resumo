@@ -125,6 +125,9 @@ p {
 
 body > header {
   @media (width >= 64rem) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     max-height: 100vh;
     padding-block: calc(var(--spacing) * 24);
     position: sticky;
@@ -132,34 +135,58 @@ body > header {
     width: 40%;
   }
 
-  & > h1 {
-    font-size: 2.25rem;
-    line-height: var(--leading-tight);
-    margin-bottom: calc(var(--spacing) * 4);
+  & > .header-content {
+    & > h1 {
+      font-size: 2.25rem;
+      line-height: var(--leading-tight);
+      margin-bottom: calc(var(--spacing) * 4);
 
-    @media (width >= 48rem) {
-      font-size: 3rem;
+      @media (width >= 48rem) {
+        font-size: 3rem;
+      }
+
+      &::first-letter {
+        /* Font padding fix */
+        margin-left: -0.03em;
+      }
     }
 
-    &::first-letter {
-      /* Font padding fix */
-      margin-left: -0.03em;
+    & > p {
+      margin-bottom: calc(var(--spacing) * 1);
+    }
+
+    & > .photo {
+      width: 10rem;
+      margin-left: calc(var(--spacing) * 16);
+      margin-top: calc(var(--spacing) * 8);
+
+      & > img {
+        border-radius: 100%;
+        border: 8px solid
+          color-mix(in srgb, var(--color-secondary) 20%, transparent);
+      }
     }
   }
 
-  & > p {
-    margin-bottom: calc(var(--spacing) * 1);
-  }
+  & > .social-links {
+    align-items: center;
+    display: flex;
+    margin-left: 0.25rem;
+    margin-top: 2rem;
 
-  & > .photo {
-    width: 10rem;
-    margin-left: calc(var(--spacing) * 16);
-    margin-top: calc(var(--spacing) * 8);
+    & > li {
+      flex-shrink: 0;
+      font-size: var(--text-xs);
+      margin-right: 1.25rem;
 
-    & > img {
-      border-radius: 100%;
-      border: 8px solid
-        color-mix(in srgb, var(--color-secondary) 20%, transparent);
+      & > a {
+        display: block;
+
+        & > svg {
+          height: 1.5rem;
+          width: 1.5rem;
+        }
+      }
     }
   }
 }
@@ -280,6 +307,10 @@ main {
   }
 }
 
+.mt-10 {
+  margin-top: calc(var(--spacing) * 10);
+}
+
 .info-unit {
   & > header {
     color: var(--color-secondary-50);
@@ -291,10 +322,6 @@ main {
   & > p {
     font-size: var(--text-sm);
   }
-}
-
-.mt-10 {
-  margin-top: calc(var(--spacing) * 10);
 }
 
 .tech-list {
