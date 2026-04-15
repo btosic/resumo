@@ -121,6 +121,11 @@ p {
   line-height: var(--leading-relaxed);
 }
 
+a:hover {
+  @media (hover: hover) {
+    color: var(--color-accent);
+  }
+}
 /* Header Styles */
 
 body > header {
@@ -208,11 +213,6 @@ nav {
     letter-spacing: var(--tracking-relaxed);
     padding-block: calc(var(--spacing) * 2);
     text-transform: uppercase;
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-accent);
-      }
-    }
   }
 }
 
@@ -275,12 +275,6 @@ main {
     & a {
       display: inline-flex;
       align-items: center;
-
-      &:hover {
-        @media (hover: hover) {
-          color: var(--color-accent);
-        }
-      }
 
       &::after {
         background-image: url("assets/img/external-link.svg");
