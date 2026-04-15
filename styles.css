@@ -448,6 +448,59 @@ main {
   }
 }
 
+#testimonials > ul {
+  list-style: none;
+  padding-left: 0;
+
+  & > li {
+    background-color: color-mix(
+      in srgb,
+      var(--color-secondary) 6%,
+      transparent
+    );
+    border-left: 3px solid var(--color-accent);
+    border-radius: 0 6px 6px 0;
+    margin-bottom: calc(var(--spacing) * 6);
+    padding: calc(var(--spacing) * 6);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    & > blockquote {
+      color: var(--color-secondary);
+      font-style: italic;
+      line-height: var(--leading-relaxed);
+      margin: 0 0 calc(var(--spacing) * 4);
+      padding: 0;
+
+      &::before {
+        color: var(--color-accent);
+        content: "\201C";
+        font-family: Georgia, serif;
+        font-size: 2.5rem;
+        line-height: 0;
+        margin-right: calc(var(--spacing) * 1);
+        position: relative;
+        top: 0.45rem;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  * > .testimonial-author {
+    color: var(--color-secondary-bright);
+    font-size: var(--text-sm);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: 0 !important;
+
+    &::before {
+      color: var(--color-accent);
+      content: "— ";
+    }
+  }
+}
+
 #contact .contact li {
   margin-bottom: calc(var(--spacing) * 1);
 }
